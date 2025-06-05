@@ -114,7 +114,7 @@ Lá você verá o painel com as informações de temperatura, nível da água e 
 
 ✍️ Autores
 
-Desenvolvido por João Paulo Francisco de Oliveira[RM557410] e Marcelo Antonio Scoleso Junior [RM557481] —
+Desenvolvido por João Paulo Francisco de Oliveira [RM557410] e Marcelo Antonio Scoleso Junior [RM557481] —
 
 Se precisar de ajuda para executar o projeto, entre em contato!
 
