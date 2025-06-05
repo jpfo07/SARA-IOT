@@ -1,0 +1,253 @@
+[
+    {
+        "id": "2916b924da967a07",
+        "type": "tab",
+        "label": "Fluxo 1",
+        "disabled": false,
+        "locked": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d53e16f58fdb49bf",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "4e1fff7df1225b18",
+        "type": "ui_tab",
+        "name": "Monitoramento",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "dd53bdab9297433b",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "3b6f1d7c55c146ac",
+        "type": "ui_group",
+        "name": "Status",
+        "tab": "4e1fff7df1225b18",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "73d3e7f7b2e0c173",
+        "type": "mqtt in",
+        "z": "2916b924da967a07",
+        "name": "",
+        "topic": "sara/sensores",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "d53e16f58fdb49bf",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 270,
+        "y": 180,
+        "wires": [
+            [
+                "bed6eaa13cf16efc"
+            ]
+        ]
+    },
+    {
+        "id": "bed6eaa13cf16efc",
+        "type": "json",
+        "z": "2916b924da967a07",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 490,
+        "y": 180,
+        "wires": [
+            [
+                "22ae4f7af86d6bdd",
+                "ea32e0d1c46af591"
+            ]
+        ]
+    },
+    {
+        "id": "22ae4f7af86d6bdd",
+        "type": "debug",
+        "z": "2916b924da967a07",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "ea32e0d1c46af591",
+        "type": "function",
+        "z": "2916b924da967a07",
+        "name": "function 1",
+        "func": "let data = msg.payload;\n\n// Se payload for string JSON, parseia\nif (typeof data === \"string\") {\n    try {\n        data = JSON.parse(data);\n    } catch (e) {\n        node.error(\"Payload não é JSON válido\");\n        return null;\n    }\n}\n\nlet linhas = [];\n\n// Nível da água\nif (typeof data.distancia === \"number\") {\n    if (data.distancia < 10) {\n        linhas.push(\"🚨 Nível de água: PERIGOSO!\");\n    } else if (data.distancia < 20) {\n        linhas.push(\"✅ Nível de água: NORMAL\");\n    } else {\n        linhas.push(\"⚠️ Nível de água: BAIXO\");\n    }\n} else {\n    linhas.push(\"⚠️ Distância não disponível\");\n}\n\n// Chuva\nif (typeof data.ldr === \"number\") {\n    if (data.ldr < 1000) {\n        linhas.push(\"🌧 Grande chance de chuva!\");\n    } else if (data.ldr < 3000) {\n        linhas.push(\"☁️ Baixa chance de chuva.\");\n    } else {\n        linhas.push(\"🌞 Sem chance de chuva.\");\n    }\n} else {\n    linhas.push(\"⚠️ LDR não disponível\");\n}\n\n// Temperatura\nif (typeof data.temperatura === \"number\") {\n    let tempNum = data.temperatura;\n    if (tempNum >= 30) {\n        linhas.push(\"🔥 Temperatura alta: \" + tempNum.toFixed(1) + \"°C\");\n    } else if (tempNum >= 20) {\n        linhas.push(\"🌤 Temperatura agradável: \" + tempNum.toFixed(1) + \"°C\");\n    } else {\n        linhas.push(\"❄️ Temperatura baixa: \" + tempNum.toFixed(1) + \"°C\");\n    }\n} else {\n    linhas.push(\"⚠️ Temperatura não disponível\");\n}\n\n// Monta o HTML com cada linha dentro de uma div, para quebrar linha visual\nmsg.payload = `\n<div style=\"\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    height: 100%;\n    text-align: center;\n    font-size: 18px;\n    flex-direction: column;\n    gap: 8px;\n\">\n    ${linhas.map(l => `<div>${l}</div>`).join('')}\n</div>\n`;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 260,
+        "wires": [
+            [
+                "47807ea1cae1f1bc"
+            ]
+        ]
+    },
+    {
+        "id": "47807ea1cae1f1bc",
+        "type": "ui_text",
+        "z": "2916b924da967a07",
+        "group": "3b6f1d7c55c146ac",
+        "order": 0,
+        "width": "6",
+        "height": "6",
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "text-align: center;",
+        "style": true,
+        "font": "Arial Black,Arial Black,Gadget,sans-serif",
+        "fontSize": "16",
+        "color": "#000000",
+        "x": 850,
+        "y": 320,
+        "wires": []
+    }
+]
